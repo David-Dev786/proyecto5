@@ -44,5 +44,27 @@ namespace Datos
             return flag;
 
         }
+        public int modificarusuario(string nombre, string apellidos, string ci, string cel, string usuario, string contrasena)
+        {
+            int flag = 0;
+            con.Open();
+            string query = "Update persona set nombre='" + nombre + "',apellidos='" + apellidos + "',ci='" + ci + "',telefono='" + cel + "',usuario='" + usuario + "',contrasena='" + contrasena + "' where ci='" + ci + "'";
+            SqlCommand cmd = new SqlCommand(query, con);
+            flag = cmd.ExecuteNonQuery();
+            con.Close();
+            return flag;
+        }
+
+        public int eliminarusuario(string ci)
+        {
+            int flag = 0;
+            con.Open();
+            string query = "Delete from persona where ci='" + ci + "'";
+            SqlCommand cmd = new SqlCommand(query, con);
+            flag = cmd.ExecuteNonQuery();
+            con.Close();
+            return flag;
+
+        }
     }
 }

@@ -39,5 +39,19 @@ namespace proyecto5
             cn.insertarusuario(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text, textBox6.Text);
             dataGridView1.DataSource = cn.consultadt();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            cn.modificarusuario(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text, textBox6.Text);
+            dataGridView1.DataSource = cn.consultadt();
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            cn.eliminarusuario(textBox3.Text);
+            dataGridView1.DataSource = cn.consultadt();
+
+        }
     }
 }

@@ -27,6 +27,17 @@ namespace Negocio
 
         }
 
+        public int modificarusuario(string nombre, string apellidos, string ci, string cel, string usuario, string contrasena)
+        {
+            return cn.modificarusuario(nombre, apellidos, ci, cel, usuario, contrasena);
+        }
+
+        public int eliminarusuario(string ci)
+        {
+            return cn.eliminarusuario(ci);
+
+        }
+
     }
 
 }
