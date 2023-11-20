@@ -37,6 +37,10 @@ namespace Negocio
             return cn.eliminarusuario(ci);
 
         }
+        public DataTable consultanew()
+        {
+            return cn.consultausuariosnew();
+        }
 
     }
 

@@ -53,5 +53,11 @@ namespace proyecto5
             dataGridView1.DataSource = cn.consultadt();
 
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = cn.consultanew();
+
+        }
     }
 }

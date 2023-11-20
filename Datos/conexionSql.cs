@@ -66,5 +66,16 @@ namespace Datos
             return flag;
 
         }
+        public DataTable consultausuariosnew()
+        {
+            string query = "select * from persona where nombre LIKE 'A%'";
+            //string query = "select * from persona where nombre LIKE ‘A%’";
+            SqlCommand cmd = new SqlCommand(query, con);
+            SqlDataAdapter data = new SqlDataAdapter(cmd);
+            DataTable tabla = new DataTable();
+            data.Fill(tabla);
+            return tabla;
+
+        }
     }
 }
